@@ -154,7 +154,7 @@ const Home = () => {
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url('/image3.png')`,
+          backgroundImage: `url('/image3.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -483,7 +483,7 @@ const Home = () => {
             <div className="relative group">
               <div className="absolute -inset-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <img
-                src="/image1.png"
+                src="/image1.webp"
                 alt="Residential HVAC installation by BestHVACinUSA"
                 className="relative w-full rounded-2xl object-cover aspect-[4/3] border border-white/5 group-hover:scale-[1.02] transition-transform duration-500"
               />
@@ -577,7 +577,7 @@ const Home = () => {
             <div className="relative group order-1 lg:order-2">
               <div className="absolute -inset-3 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <img
-                src="/image2.png"
+                src="/image2.webp"
                 alt="Commercial HVAC system by BestHVACinUSA"
                 className="relative w-full rounded-2xl object-cover aspect-[4/3] border border-white/5 group-hover:scale-[1.02] transition-transform duration-500"
               />

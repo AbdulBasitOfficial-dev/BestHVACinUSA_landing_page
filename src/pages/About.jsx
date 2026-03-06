@@ -90,7 +90,7 @@ const About = () => {
       <section
         className="relative min-h-[70vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8"
         style={{
-          backgroundImage: `url('/image2.png')`,
+          backgroundImage: `url('/image2.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
