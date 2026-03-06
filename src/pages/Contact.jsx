@@ -1,45 +1,12 @@
-import { useState } from "react";
-import {
-  FiPhone,
-  FiMapPin,
-  FiClock,
-  FiSend,
-  FiUser,
-  FiCheck,
-} from "react-icons/fi";
+import { FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
-  FaSnowflake,
 } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: "", phone: "", service: "", message: "" });
-    }, 1500);
-  };
-
   const contactInfo = [
     {
       icon: FiPhone,
@@ -65,16 +32,6 @@ const Contact = () => {
       iconColor: "text-purple-400",
       iconBg: "bg-purple-400/10",
     },
-  ];
-
-  const services = [
-    "HVAC Installation",
-    "Repair & Maintenance",
-    "Emergency Services",
-    "Commercial HVAC",
-    "Air Quality Solutions",
-    "Energy Efficiency Upgrades",
-    "Other",
   ];
 
   return (
@@ -149,140 +106,75 @@ const Contact = () => {
       <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16">
-            {/* Contact Form */}
+            {/* Notice Card */}
             <div>
               <span className="text-[#f97316] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block text-center lg:text-left">
-                Send Message
+                Important Notice
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-5 text-center lg:text-left">
-                Request a Free Quote
+                Get a Free Quote
               </h2>
               <p className="text-gray-400 mb-8 sm:mb-10 text-sm sm:text-base text-center lg:text-left">
-                Fill out the form and our team will contact you within 24 hours.
+                We&apos;re here to help with all your HVAC needs.
               </p>
 
-              {isSubmitted ? (
-                <div className="bg-green-900/30 border border-green-500/30 rounded-xl sm:rounded-2xl p-8 sm:p-10 text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-5 sm:mb-6 bg-green-500 rounded-full flex items-center justify-center">
-                    <FiCheck className="text-3xl sm:text-4xl text-white" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
-                    Thank You!
-                  </h3>
-                  <p className="text-gray-300 mb-6 sm:mb-8 text-sm sm:text-base">
-                    Your message has been sent. We&apos;ll contact you shortly.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white/10 text-white rounded-xl font-medium hover:bg-white/20 transition-colors text-sm sm:text-base"
-                  >
-                    Send Another Message
-                  </button>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-5 sm:space-y-6"
-                >
-                  <div>
-                    <label className="text-xs sm:text-sm font-medium text-gray-300 mb-2 sm:mb-3 block">
-                      Your Name *
-                    </label>
-                    <div className="relative">
-                      <FiUser className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-500" />
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="John Doe"
-                        className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 bg-[#0f2744] border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#38bdf8] transition-colors text-sm sm:text-base"
+              <div className="bg-[#1a1a2e] border border-yellow-500/30 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10">
+                {/* Warning Icon */}
+                <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-yellow-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                       />
-                    </div>
+                    </svg>
                   </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-yellow-400">
+                    Messaging Service Unavailable
+                  </h3>
+                </div>
 
-                  <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
-                    <div>
-                      <label className="text-xs sm:text-sm font-medium text-gray-300 mb-2 sm:mb-3 block">
-                        Phone
-                      </label>
-                      <div className="relative">
-                        <FiPhone className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-500" />
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="(323) 000-0000"
-                          className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 bg-[#0f2744] border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#38bdf8] transition-colors text-sm sm:text-base"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="text-xs sm:text-sm font-medium text-gray-300 mb-2 sm:mb-3 block">
-                        Service *
-                      </label>
-                      <div className="relative">
-                        <FaSnowflake className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-500" />
-                        <select
-                          name="service"
-                          value={formData.service}
-                          onChange={handleChange}
-                          required
-                          className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 bg-[#0f2744] border border-white/10 rounded-xl text-white appearance-none focus:border-[#38bdf8] transition-colors cursor-pointer text-sm sm:text-base"
-                        >
-                          <option value="" className="bg-[#0f2744]">
-                            Select service
-                          </option>
-                          {services.map((service) => (
-                            <option
-                              key={service}
-                              value={service}
-                              className="bg-[#0f2744]"
-                            >
-                              {service}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+                {/* Notice Message */}
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+                  Our online messaging service is currently{" "}
+                  <span className="text-yellow-400 font-semibold">
+                    not available
+                  </span>
+                  . We apologize for the inconvenience. To get a free quote or
+                  discuss your HVAC needs, please call us directly at the number
+                  below. Our team is available{" "}
+                  <span className="text-white font-medium">24/7</span> to assist
+                  you.
+                </p>
 
-                  <div>
-                    <label className="text-xs sm:text-sm font-medium text-gray-300 mb-2 sm:mb-3 block">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      placeholder="Tell us about your HVAC needs..."
-                      className="w-full px-4 py-3 sm:py-4 bg-[#0f2744] border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-[#38bdf8] transition-colors resize-none text-sm sm:text-base"
-                    />
-                  </div>
+                {/* Divider */}
+                <div className="border-t border-white/10 mb-6 sm:mb-8"></div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 sm:gap-3 px-6 py-3.5 sm:py-4 bg-[#f97316] text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-[#ea580c] transition-colors disabled:opacity-50"
+                {/* Call CTA */}
+                <div className="text-center">
+                  <p className="text-gray-400 text-xs sm:text-sm mb-4">
+                    Reach us anytime — we&apos;re just a call away
+                  </p>
+                  <a
+                    href="tel:+13239909291"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-[#f97316] text-white rounded-xl font-bold text-lg sm:text-xl hover:bg-[#ea580c] transition-all hover:scale-105 shadow-lg shadow-orange-500/20"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <FiSend />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                    <FiPhone className="text-xl sm:text-2xl" />
+                    +1 (323) 990-9291
+                  </a>
+                  <p className="text-gray-500 text-xs mt-4">
+                    Available 24 hours a day, 7 days a week
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Right Side */}
