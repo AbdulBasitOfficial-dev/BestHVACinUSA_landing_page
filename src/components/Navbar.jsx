@@ -61,11 +61,11 @@ const Navbar = () => {
 
           {/* Phone CTA */}
           <a
-            href="tel:+13213860371"
+            href="tel:+13239909291"
             className="hidden md:flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 bg-[#f97316] text-white rounded-lg font-semibold text-xs lg:text-sm hover:bg-[#ea580c] transition-colors"
           >
             <FiPhone className="text-sm lg:text-base" />
-            <span>+1 (321) 386-0371</span>
+            <span>+1 (323) 990-9291</span>
           </a>
 
           {/* Mobile Menu Button */}
@@ -96,11 +96,11 @@ const Navbar = () => {
                 </Link>
               ))}
               <a
-                href="tel:+13213860371"
+                href="tel:+13239909291"
                 className="flex items-center justify-center gap-2 mx-4 mt-3 px-5 py-3.5 bg-[#f97316] text-white rounded-xl font-semibold text-md "
               >
                 <FiPhone />
-                <span>+1 (321) 386-0371</span>
+                <span>+1 (323) 990-9291</span>
               </a>
             </div>
           </div>
