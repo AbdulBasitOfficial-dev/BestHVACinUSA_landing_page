@@ -112,7 +112,7 @@ const Contact = () => {
                 Important Notice
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-5 text-center lg:text-left">
-                Get a Free Quote
+                Contact Us
               </h2>
               <p className="text-gray-400 mb-8 sm:mb-10 text-sm sm:text-base text-center lg:text-left">
                 We&apos;re here to help with all your HVAC needs.
@@ -148,9 +148,9 @@ const Contact = () => {
                   <span className="text-yellow-400 font-semibold">
                     not available
                   </span>
-                  . We apologize for the inconvenience. To get a free quote or
-                  discuss your HVAC needs, please call us directly at the number
-                  below. Our team is available{" "}
+                  . We apologize for the inconvenience. To discuss your HVAC
+                  needs, please call us directly at the number below. Our team
+                  is available{" "}
                   <span className="text-white font-medium">24/7</span> to assist
                   you.
                 </p>

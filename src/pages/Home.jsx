@@ -190,7 +190,7 @@ const Home = () => {
               to="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-4 px-8 py-4 bg-[#f97316] text-white rounded-xl font-bold text-lg hover:bg-[#ea580c] transition-all shadow-lg hover:shadow-orange-500/20"
             >
-              Get Free Quote
+              Contact Us
               <FiArrowRight />
             </Link>
             <a
@@ -521,13 +521,13 @@ const Home = () => {
                 ))}
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="tel:+13239909291"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#f97316] text-white rounded-xl font-semibold hover:bg-[#ea580c] transition-colors text-sm sm:text-base"
               >
-                Get a Free Quote
-                <FiArrowRight />
-              </Link>
+                <FiPhone />
+                Call Us Now
+              </a>
             </div>
           </div>
 
